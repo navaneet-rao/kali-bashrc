@@ -164,6 +164,9 @@ alias lll='ll -a'
 # some git aliases
 alias gitlog='git log --oneline --graph'
 
+# neovim aliases
+alias nvim='~/nvim.appimage'
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -183,3 +186,4 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+. "$HOME/.cargo/env"
