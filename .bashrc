@@ -67,17 +67,22 @@ git_branch() {
     # Get the current branch in the git repository
     branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
     git_bisect=$(git bisect visualize 2>/dev/null)
-    
+    git_tag=$(git describe --tags --exact-match HEAD 2>/dev/null) 
+
     if [ -n "$branch" ]; then
         if [ -z "$git_bisect" ]; then  # Check if not in a bisect
-            git_ps1="${branch_icon} ${branch}"
+            if [ -n "$git_tag" ]; then  # Check if tagged commit
+                git_ps1="${branch_icon} tag:( ${git_tag} )"
+            else
+                git_ps1="${branch_icon} ${branch}"
+            fi
             echo -e " ${git_ps1} "
         else
             git_head=$(git rev-parse --verify HEAD 2>/dev/null)
             echo -e " bisect: (${git_head}) "
         fi
     fi
-}
+  }
 
 
 GREEN='\033[32m'
