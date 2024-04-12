@@ -1,4 +1,4 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
+# ~/.bashrc: executed by bash(1) for non-login shells 
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -141,8 +141,8 @@ if [ -x /usr/bin/dircolors ]; then
     export LS_COLORS="$LS_COLORS:ow=30;44:" # fix ls color for folders with 777 permissions
 
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
@@ -170,9 +170,10 @@ alias lll='ll -a'
 
 # some git aliases
 alias gitlog='git log --oneline --graph'
+alias gits="git status"
 
 # neovim aliases
-alias nvim='~/nvim.appimage'
+alias vim='~/nvim.appimage'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
