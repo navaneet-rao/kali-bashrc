@@ -174,6 +174,7 @@ alias lll='ll -a'
 # some git aliases
 alias gitl='git log --oneline --graph'
 alias gits="git status"
+alias gitc="git commit -m "
 
 # neovim aliases
 alias vim='~/nvim.appimage'
